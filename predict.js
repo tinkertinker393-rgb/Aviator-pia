@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
   const platformConfig = {
     betika: {
-      url: 'https://www.betika.com/en-gb/games/aviator',
+      url: 'https://www.betika.com/en-ke/aviator',
       selectors: [
         '.aviator-current-multiplier',
         '.current-multiplier-value',
