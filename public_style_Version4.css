@@ -1,0 +1,19 @@
+body{background-color:black;color:red;font-family:monospace;text-align:center;padding:20px}
+h1{color:red;font-weight:bold}
+.box{border:2px solid red;padding:15px;margin:15px auto;width:80%}
+.button,.green-button{border:2px solid red;background:black;color:red;padding:10px 30px;cursor:pointer;font-weight:bold;font-size:16px;margin:10px 0;text-decoration:none;display:inline-block}
+.button:hover{background:red;color:black;transition:.3s}
+.green-button{color:#00ff00;border:2px solid #00ff00}
+.green-button:hover{background:#00ff00;color:black;transition:.3s;text-decoration:none}
+a{color:red;text-decoration:underline}
+.hidden{display:none}
+.error{color:#ff0000;font-weight:bold;margin-top:10px}
+.success{color:#00ff00;font-weight:bold;margin-top:10px}
+.input-bar{border:2px solid red;background:black;color:red;font-weight:bold;font-size:24px;text-align:center;margin:5px}
+#prediction-result{color:#00ff00;font-size:22px;font-weight:bold;margin-top:20px}
+.noselect, input, button, a { user-select: none; }
+img {pointer-events:none;user-drag:none;-webkit-user-drag:none;}
+.platforms{display:flex;justify-content:center;gap:24px;margin:20px 0 32px 0;flex-wrap:wrap;}
+.platform-bar{background:#222;padding:30px 24px;border-radius:16px;font-size:1.7em;cursor:pointer;transition:background 0.2s,transform 0.2s;box-shadow:0 4px 16px #0009;min-width:120px;margin:12px;}
+.platform-bar.selected{background:#00ff00;color:black;}
+.platform-bar:hover{background:red;color:black;transform:scale(1.04);}

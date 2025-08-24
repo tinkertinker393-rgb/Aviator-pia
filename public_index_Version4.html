@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Aviator AI Prediction Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body oncopy="return false" oncut="return false" onpaste="return false">
+<!-- © 2025 Powered by Mr. Eliakim. Unauthorized copying prohibited. -->
+<script>
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault()});
+  document.addEventListener('selectstart',function(e){e.preventDefault()});
+  document.addEventListener('dragstart',function(e){e.preventDefault()});
+  document.onkeydown=function(e){
+    if (
+      e.keyCode==123 ||
+      (e.ctrlKey&&e.shiftKey&&e.keyCode==73) ||
+      (e.ctrlKey&&e.keyCode==85) ||
+      (e.ctrlKey&&e.keyCode==83) ||
+      (e.ctrlKey&&e.keyCode==67) ||
+      (e.ctrlKey&&e.keyCode==80) ||
+      (e.key=="PrintScreen")
+    ) { 
+      alert("Action blocked for security reasons."); 
+      return false; 
+    }
+  };
+  window.addEventListener('keyup',function(e){
+    if (e.key=="PrintScreen"){navigator.clipboard.writeText("Copyright © 2025 Mr. Eliakim");}
+  });
+  document.body.addEventListener('copy',e=>e.preventDefault());
+  document.body.addEventListener('cut',e=>e.preventDefault());
+  document.body.addEventListener('paste',e=>e.preventDefault());
+  console.log('%c© 2025 Powered by Mr. Eliakim. Unauthorized copying prohibited.','color:#00ff00;font-size:16px;');
+  (function(z){var a=z.split('').reverse().join('');return a;})('SecurityByEliakim');
+})();
+function showScreenshotBar(){document.getElementById('screenshot-bar').classList.remove('hidden')}
+function paymentDone(){document.getElementById('page1').classList.add('hidden');document.getElementById('page2').classList.remove('hidden')}
+function loginCheck(){
+  var p=document.getElementById('password').value,e=document.getElementById('login-error');
+  if(p!="#001Aveli"){
+    e.innerText="Invalid password. Contact developer.";
+    e.classList.remove('hidden');
+    return false;
+  }else{
+    e.classList.add('hidden');
+    document.getElementById('page2').classList.add('hidden');
+    document.getElementById('page3').classList.remove('hidden');
+    return false;
+  }
+}
+setInterval(function(){
+  let mark = document.getElementById('eliakim-watermark');
+  if (!mark) {
+    mark = document.createElement('div');
+    mark.id = 'eliakim-watermark';
+    mark.innerText = '© 2025 Powered by Mr. Eliakim';
+    mark.style.position='fixed';
+    mark.style.bottom='10px';
+    mark.style.right='10px';
+    mark.style.color='#00ff00';
+    mark.style.opacity='0.25';
+    mark.style.fontSize='20px';
+    mark.style.pointerEvents='none';
+    mark.style.zIndex='9999';
+    document.body.appendChild(mark);
+  }
+},4000);
+</script>
+<div id="page1">
+  <h1 class="noselect">AVIATOR-PREDICTOR</h1>
+  <div class="box noselect">
+    <a href="https://wa.me/254739320033" target="_blank" class="green-button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:16px;vertical-align:middle;margin-right:8px;">Contact Developer
+    </a>
+    <br><br>
+    <p style="color:#00ff00;">Pay <strong>300sh</strong> to Airtel <br><span style="font-size:22px;">0739320033</span></p>
+    <button class="button" onclick="showScreenshotBar()">Send Payment Screenshot</button>
+    <div id="screenshot-bar" class="hidden" style="margin-top:20px;">
+      <a href="https://wa.me/254739320033" target="_blank" class="green-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:16px;vertical-align:middle;margin-right:8px;">Send Screenshot to Developer
+      </a>
+      <br><br>
+      <button class="button" onclick="paymentDone()">I have sent screenshot</button>
+    </div>
+  </div>
+  <p style="color:red;margin-top:50px;" class="noselect">DEVELOPER BY ELIAKIM</p>
+</div>
+<div id="page2" class="hidden">
+  <h1>LOGIN</h1>
+  <div class="box">
+    <form id="login-form" autocomplete="off" onsubmit="return loginCheck()">
+      <input type="email" id="email" autocomplete="off" placeholder="Email" required style="border:2px solid red;background:black;color:red;font-weight:bold;font-size:18px;text-align:center;margin:5px;">
+      <br>
+      <input type="password" id="password" autocomplete="off" placeholder="Password" required style="border:2px solid red;background:black;color:red;font-weight:bold;font-size:18px;text-align:center;margin:5px;">
+      <br>
+      <button type="submit" class="button">Log In</button>
+    </form>
+    <div id="login-error" class="error hidden"></div>
+  </div>
+</div>
+<div id="page3" class="hidden">
+  <h1>WELCOME TO AVIATOR-PREDICTOR</h1>
+  <div class="box success">Access Granted! You can now use the AI Prediction Tool.</div>
+  <div class="box">
+    <strong>Select Platform</strong>
+    <div class="platforms" id="platform-selector">
+      <div class="platform-bar" data-platform="betika">BETIKA</div>
+      <div class="platform-bar" data-platform="odi">ODI</div>
+      <div class="platform-bar" data-platform="shabiki">SHABIKI</div>
+      <div class="platform-bar" data-platform="sportpesa">SPORTPESA</div>
+    </div>
+    <button class="button" id="predict-btn" disabled>Predict Crash</button>
+    <div id="prediction-result"></div>
+  </div>
+  <div class="box">
+    <p>If you don't have a Betika account:</p>
+    <a href="https://www.betika.com/" target="_blank" class="green-button" style="font-size:18px;">
+      CREATE BETIKA ACCOUNT
+    </a>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "aviator-vercel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
+    "puppeteer-core": "^21.6.0"
+  }
+}
